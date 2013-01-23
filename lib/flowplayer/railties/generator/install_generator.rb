@@ -1,5 +1,5 @@
 module Flowplayer::Generator
-  class InstallGenerator < Rails::Generators::Base
+  class InstallGenerator < ::Rails::Generators::Base
     namespace 'flowplayer'
     source_root File.expand_path("../../../../../vendor/assets/", __FILE__)
     argument :install_type, :type => :string, :banner => "commercial", :required => false, :default => ''

@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/scottdavis/flowplayer-gem.png?branch=master)](https://travis-ci.org/scottdavis/flowplayer-gem)
 # Flowplayer Helper for Rails 3 applications
 
 1. `gem 'flowplayer'` in your gem file

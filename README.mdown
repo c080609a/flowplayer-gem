@@ -2,9 +2,9 @@
 # Flowplayer Helper for Rails 3 applications
 
 1. `gem 'flowplayer'` in your gem file
-2. Copy assets
-    - Without asset pipeline ` rails g flowplayer` or `rails g flowplayer commercial`
-    - With asset pipeline ` rails g flowplayer --with-asset-pipeline` or `rails g flowplayer commercial --with-asset-pipeline`
+2. copy assets
+    - With asset pipeline `rails g flowplayer` or `rails g flowplayer commercial`
+    - Without asset pipeline ` rails g flowplayer --without-asset-pipeline` or `rails g flowplayer commercial --without-asset-pipeline`
 3. add `javascript_include_tag 'flowplayer.min.js'` to your application layout
 4. read below
 

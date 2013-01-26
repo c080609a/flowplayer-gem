@@ -1,13 +1,14 @@
 module Flowplayer::Generator
   class InstallGenerator < ::Rails::Generators::Base
-    class_option :with_asset_pipeline, :type => :boolean, :default => false, :desc => "Place assets in vendor/assets instead of public folder"
-
     namespace 'flowplayer'
     source_root File.expand_path("../../../../../vendor/assets/", __FILE__)
+    class_option :without_asset_pipeline, :type => :boolean, :default => false, :desc => "Place assets in public folder"
     argument :install_type, :type => :string, :banner => "commercial", :required => false, :default => ''
 
     def install_flowplayer
-      copy_file 'javascripts/flowplayer-3.2.11.min.js', Rails.root.join(public_folder, 'javascripts', 'flowplayer.min.js')
+      if options[:without_asset_pipeline]
+        copy_file 'javascripts/flowplayer-3.2.11.min.js', Rails.root.join("public", 'javascripts', 'flowplayer.min.js')
+      end
     end
 
     def install_swfs
@@ -18,10 +19,6 @@ module Flowplayer::Generator
         copy_file '../../FLOWPLAYER_LICENSE.txt', Rails.root.join('FLOWPLAYER_LICENSE.txt')
       end
       copy_file 'flash/flowplayer.controls-3.2.14.swf', Rails.root.join('public', 'flowplayer.controls.swf')
-    end
-
-    def public_folder
-      options[:with_asset_pipeline] ? "vendor/assets" : "public"
     end
   end
 end

@@ -1,7 +1,7 @@
 module Flowplayer::Generator
   class InstallGenerator < ::Rails::Generators::Base
     namespace 'flowplayer'
-    source_root File.expand_path("../../../../../vendor/assets/", __FILE__)
+    source_root File.expand_path("../../../../../app/assets/", __FILE__)
     class_option :without_asset_pipeline, :type => :boolean, :default => false, :desc => "Place assets in public folder"
     argument :install_type, :type => :string, :banner => "commercial", :required => false, :default => ''
 

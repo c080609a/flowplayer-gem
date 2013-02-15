@@ -2,30 +2,32 @@
 # Flowplayer Helper for Rails 3 applications
 
 1. `gem 'flowplayer'` in your gem file
-2. ` rails g flowplayer` or `rails g flowplayer commercial`
+2. copy assets
+    - With asset pipeline `rails g flowplayer` or `rails g flowplayer commercial`
+    - Without asset pipeline ` rails g flowplayer --without-asset-pipeline` or `rails g flowplayer commercial --without-asset-pipeline`
 3. add `javascript_include_tag 'flowplayer.min.js'` to your application layout
 4. read below
 
 ##Usage
 
     <a id='video' style='display:block;width:512px;height312px;'>
-    
+
   For JQuery
 
     = flowplayer_for :video, '/flowplayer.swf', 'jquery' do |player|
       - player.playlist [{:url => "video_still.jpg" }, {:url => "video_512x288.flv", :autoPlay => false, :autoBuffering => true }]
       - player.onLoad do
         - 'this.unmute();'
-  For Prototype    
-  
+  For Prototype
+
     = flowplayer_for :video, '/flowplayer.swf', 'prototype' do |player|
       - player.playlist [{:url => "video_still.jpg" }, {:url => "video_512x288.flv", :autoPlay => false, :autoBuffering => true }]
       - player.onLoad do
         - 'this.unmute();'
-        
+
 ## Configs are the same ones here
-  
+
   http://flowplayer.org/documentation/api/index.html
 
-## TODO 
+## TODO
   More documentation

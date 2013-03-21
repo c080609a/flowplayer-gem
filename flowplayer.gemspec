@@ -1,16 +1,15 @@
 Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
 
-  s.name = %q{flowplayer}
+  s.name = %q{flowplayer-rails}
   s.version = '0.1.3'
   s.platform    = Gem::Platform::RUBY
 
   s.authors = ["Scott Davis"]
-  s.description = %q{Flowplayer helper for Rails 3}
-  s.summary = %q{Flowplayer helper for Rails 3}
+  s.description = %q{Flowplayer assets and helper for the asset pipeline}
+  s.summary = %q{Flowplayer helper for Rails 3+}
   s.email = %q{jetviper21@gmail.com}
 
-  s.date = Date.today.to_s
   s.files        = `git ls-files`.split("\n")
   s.executables  = `git ls-files`.split("\n").map{|f| f =~ /^bin\/(.*)/ ? $1 : nil}.compact
   s.require_path = 'lib'

@@ -3,8 +3,8 @@ class String
     self
   end
 end
-describe Flowplayer::Helper do
-  include Flowplayer::Helper
+describe FlowplayerHelper do
+  include FlowplayerHelper
   
   
   

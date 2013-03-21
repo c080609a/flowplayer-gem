@@ -1,6 +1,6 @@
-module Flowplayer
-  module Rails
-    class Engine < ::Rails::Engine
-    end
+require 'flowplayer/player'
+ 
+module Flowplayer::Rails
+  class Engine < ::Rails::Engine
   end
 end

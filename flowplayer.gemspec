@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.executables  = `git ls-files`.split("\n").map{|f| f =~ /^bin\/(.*)/ ? $1 : nil}.compact
   s.require_path = 'lib'
 
-  s.homepage = %q{https://github.com/jetviper21/flowplayer-gem}
+  s.homepage = %q{https://github.com/scottdavis/flowplayer-gem}
   s.rdoc_options = ["--charset=UTF-8"]
   s.required_rubygems_version = ">= 1.3.6"
   
